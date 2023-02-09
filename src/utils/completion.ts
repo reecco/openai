@@ -1,4 +1,4 @@
-import { openai } from '../config/';
+import openai from '../config/';
 
 export async function completion(model: string, prompt: string, max_tokens: number) {
   try {
