@@ -1,7 +1,6 @@
-import { completion } from './src/utils/completion';
+import app from './src/';
+import { config } from 'dotenv';
 
-(async () => {
-  const response = Object(await completion('text-davinci-003', 'O que é o TypeScript?', 2048));
+config();
 
-  console.log(response.data.choices);
-})();
+app.listen(process.env.PORT, () => console.log(`http://localhost:${process.env.PORT}`));
